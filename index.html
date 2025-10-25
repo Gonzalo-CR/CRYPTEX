@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRYPTEX - Versión 1.0</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CRYPTEX</h1>
+            <p class="subtitle">Laboratorio criptográfico multi-método</p>
+        </header>
+
+        <div class="mode-selector">
+            <button class="mode-btn active" data-mode="phrase-key">Frase Clave</button>
+            <button class="mode-btn" data-mode="multi-method">Múltiples Métodos</button>
+        </div>
+
+        <div class="input-section">
+            <div class="section-title">
+                <i>📝</i> Texto de Entrada
+            </div>
+            <textarea id="input-text" placeholder="Ingrese el texto aquí..."></textarea>
+
+            <!-- Panel para Frase Clave -->
+            <div id="phrase-key-panel" class="mode-panel active">
+                <div class="config-section">
+                    <div class="config-group">
+                        <label for="phrase-key">Frase Clave</label>
+                        <input type="text" id="phrase-key" maxlength="128" placeholder="Ingrese la frase clave (máx. 128 caracteres)">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel para Múltiples Métodos -->
+            <div id="multi-method-panel" class="mode-panel">
+                <div class="config-section">
+                    <div class="config-group">
+                        <label for="cipher-method">Método de Cifrado</label>
+                        <select id="cipher-method">
+                            <option value="caesar">Cifrado César</option>
+                            <option value="vigenere">Cifrado Vigenère</option>
+                            <option value="substitution">Cifrado de Sustitución</option>
+                            <option value="transposition">Cifrado de Transposición</option>
+                            <option value="rot13">ROT13</option>
+                            <option value="xor">Cifrado XOR</option>
+                            <option value="base64">Base64</option>
+                            <option value="atbash">Atbash</option>
+                            <option value="reverse">Invertir Texto</option>
+                            <option value="morse">Código Morse</option>
+                            <option value="rail-fence">Cifrado Rail Fence</option>
+                        </select>
+                    </div>
+                    <div class="config-group">
+                        <label for="key">Clave</label>
+                        <input type="text" id="key" placeholder="Clave (si es necesaria)">
+                    </div>
+                </div>
+                <div id="instructions" class="instructions">
+                    Seleccione un método de cifrado para ver las instrucciones.
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="btn-primary" onclick="encryptText()">
+                    <i>🔒</i> Encriptar
+                </button>
+                <button class="btn-secondary" onclick="decryptText()">
+                    <i>🔓</i> Desencriptar
+                </button>
+            </div>
+        </div>
+
+        <div class="output-section">
+            <div class="section-title">
+                <i>📄</i> Texto de Salida
+            </div>
+            <textarea id="output-text" readonly placeholder="El resultado aparecerá aquí..."></textarea>
+            <div class="output-controls">
+                <button class="btn-success" id="copy-btn" onclick="copyText()" disabled>
+                    <i>📋</i> Copiar
+                </button>
+                <button class="btn-danger" id="reset-btn" onclick="resetState()" disabled>
+                    <i>🔄</i> Restablecer
+                </button>
+            </div>
+        </div>
+
+        <footer>
+            <p>CRYPTEX - Versión 1.0 &copy; 2023 - <a href="https://github.com/Gonzalo-CR" target="_blank" rel="noopener noreferrer">GECR</a> - Todos los derechos reservados</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
