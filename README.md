@@ -44,6 +44,8 @@ CRYPTEX es una herramienta web completa que combina múltiples métodos de cifra
 
 ## 🖥️ Cómo usar
 
+### Modo alojado
+
 1. **Cloná o descargá** este repositorio
 2. **Abrí** `index.html` en tu navegador
 3. **Seleccioná** el modo de operación:
@@ -51,6 +53,11 @@ CRYPTEX es una herramienta web completa que combina múltiples métodos de cifra
    - **Múltiples Métodos**: Elegí el algoritmo y clave correspondiente
 4. **Hacé clic** en "Encriptar" o "Desencriptar"
 5. **Copiá** el resultado usando el botón correspondiente
+
+### Modo web
+
+- **Accedé a la versión online en:**  
+https://gonzalo-cr.github.io/CRYPTEX/
 
 ### 📝 Consideraciones específicas por método:
 - **Transposición**: La clave debe ser un número entre 2 y 19
@@ -139,4 +146,4 @@ Este proyecto está bajo la licencia MIT. Ver `LICENSE` para más detalles.
 
 ---
 
-**✨ "La criptografía es el arte de transformar secretos en puzzles y puzzles en secretos"**
+**✨ "La criptografía es el arte de transformar secretos en rompecabezas y luego, en secretos nuevamente"**
